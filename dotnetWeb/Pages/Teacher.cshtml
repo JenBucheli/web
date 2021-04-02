@@ -1,0 +1,29 @@
+﻿@page
+@model HelloWorld.Pages.TeacherModel
+@{ }
+<p>@Model.Message @DateTime.Now</p>
+
+<h2>Teachers</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Class Id</th>
+
+        </tr>
+    </thead>
+
+    @foreach (var teacher in @Model.Teachers)
+    {
+    <tbody>
+        <tr>
+            <th scope="row">@teacher.Id</th>
+            <td>@teacher.Name</td>
+            <td>@teacher.ClassId</td>
+
+        </tr>
+    </tbody>
+     }
+
+</table>
